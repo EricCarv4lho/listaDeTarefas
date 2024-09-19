@@ -35,7 +35,7 @@ public class TarefaController {
     }
 
     @GetMapping("/listar/{id}")
-    public ResponseEntity<Optional<Tarefa>> listarTarefas(Long id) {
+    public ResponseEntity<Optional<Tarefa>> listarUmaTarefa(@PathVariable Long id) {
      return new ResponseEntity<>(tarefaService.listarUmaTarefa(id),HttpStatus.OK);
     }
 
